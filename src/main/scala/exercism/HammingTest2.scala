@@ -6,8 +6,8 @@ object HammingTest2 extends App{
 
     def distance  (a: String, b:String) =
       if (a.length == b.length) {
-        val dist = a.zip(b).count(pairs => pairs._1 != pairs._2)
-        Some(dist)
+        val count = a.zip(b).count(pairs => pairs._1 != pairs._2)
+        Some(count)
       } else None
   }
 
