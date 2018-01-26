@@ -5,17 +5,14 @@ object AccumulateTest extends App {
   class Accumulate[T, A] {
 
     def accumulate[T, A](f: (A) => T, list: List[A]) : List[T] = {
-      var newList = List[T]()
-     for (i <- list){
-       newList = newList :+ f(i)
+    /*  var newList = List[T]()*/
+     for (i <- list) yield f(i)
 
-     }
-      newList
+ /*newList*/
     }
-
 
   }
   val accumulate = new Accumulate
-  println(accumulate.accumulate[String, Int](_.toString, List(1, 2, 3)))
+  println(accumulate.accumulate[String, String](_.reverse, List("eht", "kciuq", "nworb", "xof", "cte")))
   println()
 }

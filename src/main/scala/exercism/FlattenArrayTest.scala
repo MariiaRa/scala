@@ -6,10 +6,9 @@ object FlattenArrayTest{
 
 
 
-    def flatten(list: List[Any]): List[Any] = list.filter(_ != null).flatMap{
-      case c: List[_] => flatten(c)
-      case b: List[Int] => b
-        case a: Int => List(a)
+    def flatten(list: List[Any]): List[Int] = list.filter(_ != null).flatMap{
+      case a: List[_] => flatten(a)
+      case b: Int => List(b)
 
       }
 
@@ -19,10 +18,12 @@ object FlattenArrayTest{
   def main(args: Array[String]): Unit = {
 
     val x = new FlattenArray
-    println(x.flatten(      List(0,
-      2,
-      List(List(2, 3), 8, List(List(100)), null, List(List(null))),
-      -2)))
+    println(x.flatten(      List(null,
+      List(List(List(null))),
+      null,
+      null,
+      List(List(null, null), null),
+      null)))
   }
 
 }
