@@ -1,6 +1,6 @@
 .idea
 target
-project/target
+project/
 src/main/scala/forExpressions
 src/main/scala/fromBook
 src/main/scala/URL
