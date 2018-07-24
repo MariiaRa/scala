@@ -10,9 +10,4 @@ object Sieve {
 
     primes((2 to limit).toList)
   }
-
-  def main(args: Array[String]): Unit = {
-    print(findPrimes(10))
-  }
-
 }
