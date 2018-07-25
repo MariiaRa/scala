@@ -14,8 +14,4 @@ object BeerSong {
       else println(s"No more $line1 no more bottles of beer.\nGo to the store and buy some more, $number $line3")
     }
   }
-
-  def main(args: Array[String]): Unit = {
-    printSong(99)
-  }
 }
